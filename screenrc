@@ -1,0 +1,44 @@
+# 5000 line scrollback
+defscrollback 5000
+
+# Don't start tcsh by default
+# shell tcsh
+
+# Use C-a as the command key
+escape ^aa
+
+# Look and feel
+termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^Et) | $USER@^EH"
+hardstatus off
+hardstatus string "%? [%h]%?"
+# caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f*%t%{-}%+Lw%-0<"
+# caption always "%?%F%{-b bc}%:%{-b yb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f*%t%{-}%+Lw%-0<"
+caption always '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %d %M %c ]%{W}'
+# Indicate activity
+activity "Activity in %t(%n)"
+
+# Show lack of activity after 10 minutes
+silence on
+silencewait 650
+
+# Give the new window a title
+shelltitle "shell"
+
+# Bind the function keys on F2
+bindkey -k k4 windowlist -b
+
+# Window cycle F3/F4
+bindkey -k k1 prev
+bindkey -k k2 next
+
+# Split controls on F5 - F8
+bindkey -k k5 split
+bindkey -k k6 only
+bindkey -k k7 focus up
+bindkey -k k8 focus down
+
+# Scrollback F9/F10
+bindkey -k k9 eval "copy" "stuff ^b"
+bindkey -m -k k9 stuff ^b
+bindkey -m -k k; stuff ^f
