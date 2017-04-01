@@ -1,0 +1,1 @@
+{"context-menu":{".tree-view .file .name[data-name$=\"html\"]":[{"label":"Open Browser","command":"open-html-in-browser:selected-entry"}]}}

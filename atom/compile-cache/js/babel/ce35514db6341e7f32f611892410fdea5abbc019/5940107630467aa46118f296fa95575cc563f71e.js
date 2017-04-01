@@ -1,0 +1,17 @@
+'use babel';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.getSiblings = getSiblings;
+function getChildren(n, skipMe) {
+  var r = [];
+  for (; n; n = n.nextSibling) if (n.nodeType == 1 && n != skipMe) r.push(n);
+  return r;
+};
+
+function getSiblings(n) {
+  return getChildren(n.parentNode.firstChild, n);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2FsaXNhbGVlbWgvLmF0b20vcGFja2FnZXMvaGV5LXBhbmUvbGliL3V0aWxzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLFdBQVcsQ0FBQzs7Ozs7O0FBRVosU0FBUyxXQUFXLENBQUMsQ0FBQyxFQUFFLE1BQU0sRUFBQztBQUM3QixNQUFJLENBQUMsR0FBRyxFQUFFLENBQUM7QUFDWCxTQUFRLENBQUMsRUFBRSxDQUFDLEdBQUcsQ0FBQyxDQUFDLFdBQVcsRUFDMUIsSUFBSyxDQUFDLENBQUMsUUFBUSxJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksTUFBTSxFQUNqQyxDQUFDLENBQUMsSUFBSSxDQUFFLENBQUMsQ0FBRSxDQUFDO0FBQ2hCLFNBQU8sQ0FBQyxDQUFDO0NBQ1YsQ0FBQzs7QUFFSyxTQUFTLFdBQVcsQ0FBQyxDQUFDLEVBQUU7QUFDN0IsU0FBTyxXQUFXLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxVQUFVLEVBQUUsQ0FBQyxDQUFDLENBQUM7Q0FDaEQiLCJmaWxlIjoiL2hvbWUvYWxpc2FsZWVtaC8uYXRvbS9wYWNrYWdlcy9oZXktcGFuZS9saWIvdXRpbHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIGJhYmVsJztcblxuZnVuY3Rpb24gZ2V0Q2hpbGRyZW4obiwgc2tpcE1lKXtcbiAgdmFyIHIgPSBbXTtcbiAgZm9yICggOyBuOyBuID0gbi5uZXh0U2libGluZyApXG4gICAgaWYgKCBuLm5vZGVUeXBlID09IDEgJiYgbiAhPSBza2lwTWUpXG4gICAgICByLnB1c2goIG4gKTtcbiAgcmV0dXJuIHI7XG59O1xuXG5leHBvcnQgZnVuY3Rpb24gZ2V0U2libGluZ3Mobikge1xuICByZXR1cm4gZ2V0Q2hpbGRyZW4obi5wYXJlbnROb2RlLmZpcnN0Q2hpbGQsIG4pO1xufVxuIl19
+//# sourceURL=/home/alisaleemh/.atom/packages/hey-pane/lib/utils.js

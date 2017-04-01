@@ -1,0 +1,48 @@
+{
+  "name": "open-html-in-browser",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "HTML files will open in your default browser",
+  "keywords": [],
+  "activationCommands": {
+    "atom-text-editor[data-grammar~='html']": [
+      "open-html-in-browser:open"
+    ],
+    ".tree-view": [
+      "open-html-in-browser:selected-entry"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aki77/atom-open-html-in-browser.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {},
+  "readme": "# open-html-in-browser package\n\nHTML files will open in your default browser.\n\n## Features\n\n* HTML files only open.\n\n## Commands\n\n* `open-html-in-browser:open`\n\n## Keymap\n\nNo keymap by default.\n\nedit `~/.atom/keymap.cson`\n\n```coffeescript\n'atom-text-editor[data-grammar~=\"html\"]':\n  'open-html-in-browser:open'\n'.tree-view':\n  'shift-o': 'open-html-in-browser:selected-entry'\n```\n\n## Similar packages\n\n* [open-in-browser](https://atom.io/packages/open-in-browser)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/aki77/atom-open-html-in-browser/issues"
+  },
+  "homepage": "https://github.com/aki77/atom-open-html-in-browser#readme",
+  "_id": "open-html-in-browser@0.1.0",
+  "_shasum": "d969db5bfec7030c4bb02a501f23874bf3b77b8f",
+  "_resolved": "file:../d-116710-8174-13y9a3v/package.tgz",
+  "_from": "../d-116710-8174-13y9a3v/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "lib/main.coffee"
+      ]
+    },
+    "folders": []
+  }
+}
