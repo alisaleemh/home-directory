@@ -1,11 +1,32 @@
 #!/bin/bash
 
 
-git add --all; 
+usage()
+{
+  echo "Usage: gitcommit -b <branch> -m <message>"
+  exit 1
+}
 
-git commit -m "'${1}'";
+while getopts "b:m:" opt ; do
+  case "$opt" in
+    m)
+    message="$OPTARG"
+    ;;
+    b)
+    branch="$OPTARG"
+    ;;
+    *)
+    usage
+    ;;
+  esac
+done
 
-git push origin $2;
+if [ -z "$message" ] || [ -z "$branch" ]; then
+  usage
+fi
 
+git add --all;
 
+git commit -m "$message";
 
+git push origin $branch;
