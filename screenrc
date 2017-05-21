@@ -42,3 +42,7 @@ bindkey -k k8 focus down
 bindkey -k k9 eval "copy" "stuff ^b"
 bindkey -m -k k9 stuff ^b
 bindkey -m -k k; stuff ^f
+
+# Enable mouse scrolling and scroll bar history scrolling
+termcapinfo xterm* ti@:te@
+
