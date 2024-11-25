@@ -1,0 +1,15 @@
+# ~/.config/starship.toml
+
+[kubernetes]
+disabled = false
+detect_folders = ['k8s']
+
+# ~/.config/starship.toml
+
+[golang]
+format = 'via [$symbol($version )($mod_version )]($style)'
+
+[custom.foo]
+command = 'echo ali' # shows output of command
+
+
